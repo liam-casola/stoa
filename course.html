@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="Style.css">
-    <script src="Script.js"></script>
+    <link rel="stylesheet" href="courselayout.css">
+    <script src="course.js"></script>
 
     <title>MAIN</title>
 </head>
@@ -11,14 +11,54 @@
         <h1><a href="Index.html">HIGHWAY TO KNOWLEDGE</a></h1>
     </header>
     <div id="content">
-        <nav>
-            <button class="button-primary focus" onclick="selectElement(this)">Announcements</button>
-            <button class="button-primary" onclick="selectElement(this)" data="calendar">Calendar</button>
-            <button class="button-primary" onclick="selectElement(this)" data="overview">Overview</button>
-            <button class="button-primary" onclick="selectElement(this)">Grades</button>
+        <nav id="primary-menu">
+            <button class="button-primary focus" onclick="selectElement(this)" data="announcement">
+                <svg class="icon">
+                    <image xlink:href="icons/megaphone.svg" />
+                </svg>
+                Announcements
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="calendar">
+                <svg class="icon">
+                    <image xlink:href="icons/calendar.svg" />
+                </svg>
+                Calendar
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="overview">
+                <svg class="icon">
+                    <image xlink:href="icons/exam.svg" />
+                </svg>
+                Overview
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="grade">
+                <svg class="icon">
+                    <image xlink:href="icons/ribbon.svg" />
+                </svg>
+                Grades
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="lecture">
+                <svg class="icon">
+                    <image xlink:href="icons/folder.svg" />
+                </svg>
+                Lectures
+            </button>
+        </nav>
+        <nav id="secondary-menu" class="collapse">
+            <button class="button-primary" onclick="selectElement(this)" data="lec4">
+                Lec 4
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="lec3">
+                Lec 3
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="lec2">
+                Lec 2
+            </button>
+            <button class="button-primary" onclick="selectElement(this)" data="lec1">
+                Lec 1
+            </button>
         </nav>
         <div id="page-viewer" class="document-viewer">
-            <iframe id="page-frame" src="4HC3-Assignment%201-2018.pdf" height="100%" width="100%"></iframe>
+            <iframe id="page-frame" src="announcement.html" height="100%" width="100%"></iframe>
         </div>
     </div>
 </body>

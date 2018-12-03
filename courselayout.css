@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'IBMPlex';
+    src: url('fonts/IBMPlexSans-Regular.woff2') format('woff2');
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'IBMPlex';
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 45px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header {
+    flex-direction: row;
+    min-width: 300px;
+    height: 45px;
+}
+
+#content {
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+nav {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.document-viewer {
+    flex-grow: 1;
+    background-color: #dedede;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+
+.icon image {
+    width: 30px;
+    height: 30px;
+}
+
+.button-primary {
+    background-color: #ffffff;
+    color: #707070;
+    font-family: 'IBMPlex';
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    flex-shrink: 0;
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-primary:hover {
+    background-color: #dedede;
+    color: #000000;
+}
+.button-primary:focus {
+    outline: none;
+}
+
+.button-primary.focus{
+    background-color: #dedede;
+    color: #000000;
+}
+
+.collapse {
+    display: none;
+}
+
+iframe {
+    display: block;
+    border: 0;
+}
