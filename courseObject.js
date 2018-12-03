@@ -25,11 +25,19 @@ var courseData = [
         link: [
             {
                 label: 'Lecture 4',
-                link: 'course1/lec_1.pdf'
+                link: 'course1/lec_4.pdf'
+            },
+            {
+                label: 'Lecture 3',
+                link: 'course1/lec_3.pdf'
+            },
+            {
+                label: 'Lecture 2',
+                link: 'course1/lec_2.pdf'
             },
             {
                 label: 'Lecture 1',
-                link: 'course1/lec_2.pdf'
+                link: 'course1/lec_1.pdf'
             },
         ]
     }

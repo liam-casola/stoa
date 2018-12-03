@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log('buildNav');
+    buildNavigation('primary-menu', courseData);
+    selectElement(document.getElementsByClassName('button-primary')[0]);
 });
 
 function selectElement(element) {
@@ -12,39 +13,38 @@ function selectElement(element) {
 }
 
 function changeData(element) {
-    var secondaryMenu = false;
-    
-    if (element.getAttribute('data') === 'announcement') {
-        document.getElementById('page-frame').src = 'announcement.html';
-    } else if (element.getAttribute('data') === 'calendar') {
-        document.getElementById('page-frame').src = 'https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mcmaster.ca_1070pjmt48obikqbsadt22bduo%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FToronto';
-    } else if (element.getAttribute('data') === 'overview') {
-        document.getElementById('page-frame').src = 'course1/outline.pdf';
-    } else if (element.getAttribute('data') === 'grade') {
-        document.getElementById('page-frame').src = 'grade.html';
-    } else if (element.getAttribute('data') === 'lecture') {
+    if (element.data.constructor === Array) {
+        buildNavigation('secondary-menu', element.data);
         document.getElementById('secondary-menu').classList.remove('collapse');
-        secondaryMenu = true;
     } else {
-        document.getElementById('page-frame').src = 'course1/assignment_1.pdf';
-    }
-    
-    if(secondaryMenu === false){
-       document.getElementById('secondary-menu').classList.add('collapse');
+        if (element.parentElement.id != 'secondary-menu') {
+            document.getElementById('secondary-menu').classList.add('collapse');
+        }
+        document.getElementById('page-frame').src = element.data;
     }
 }
 
-function buildNavigation() {
-    courseData.forEach( function(p) {
+function buildNavigation(nav, navItems) {
+    // empty the nav since it's being fille again
+    document.getElementById(nav).innerHTML = '';
+    
+    navItems.forEach( function(p) {
         var navNode = document.createElement('button');
-        var svgNode = document.createElement('svg');
+        var svgNode = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         var imageNode = document.createElement('image');
+        
         navNode.setAttribute('class', 'button-primary');
         navNode.setAttribute('onclick', 'selectElement(this)');
-        navNode.setAttribute('data', p.data);
-        svgNode.setAttribute('class', 'icon');
-        imageNode.setAttribute('xlink:href', p.link);
+        navNode.data = p.link;
+        navNode.innerHTML = p.label;
         
-        // complete me
+        if(nav == 'primary-menu') {
+            svgNode.setAttribute('class', 'icon');
+            imageNode.setAttribute('href', p.icon);
+            svgNode.append(imageNode);
+            navNode.prepend(svgNode);    
+        }
+        
+        document.getElementById(nav).appendChild(navNode);
     });
 }
