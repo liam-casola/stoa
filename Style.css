@@ -34,47 +34,6 @@ header {
     flex-grow: 1;
 }
 
-nav {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-.document-viewer {
-    flex-grow: 1;
-}
-
-.button-primary {
-    background-color: #ffffff;
-    color: #707070;
-    font-family: 'IBMPlex';
-    font-weight: 700;
-    text-align: left;
-    flex-shrink: 0;
-    margin: 0px;
-    padding: 10px;
-    border: 0px;
-}
-
-.button-primary:hover {
-    background-color: #dedede;
-    color: #000000;
-}
-.button-primary:focus {
-    outline: none;
-}
-
-.button-primary.focus{
-    background-color: #dedede;
-    color: #000000;
-}
-
-iframe {
-    display: block;
-    border: 0;
-}
-
 #card-box {
     margin: 0 auto;
 }
@@ -92,9 +51,4 @@ h2 {
     border: 0px;
     padding: 3px 1px;
     background-color: aqua;
-}
-
-object {
-    width: 100%;
-    height: 100%;
 }

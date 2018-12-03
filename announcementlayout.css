@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'IBMPlex';
+    src: url('fonts/IBMPlexSans-Regular.woff2') format('woff2');
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    margin-top: 30px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.event {
+    background-color: #ffffff;
+    margin: 7px auto;
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.event p {
+    margin: 0;
+    padding: 0;
+    color: #676767;
+}
