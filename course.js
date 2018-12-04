@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
 function selectElement(element) {
     var buttons = document.querySelectorAll('.button-primary.focus');
     for (let e of buttons) {
-        e.classList.remove('focus');
+        if (
+            element.parentElement.id == 'primary-menu' ||
+            e.parentElement.id == 'secondary-menu'
+        ) {
+            e.classList.remove('focus');
+        }
     }
     element.classList.add('focus');
     changeData(element);
