@@ -56,11 +56,11 @@ nav {
     width: 30px;
     height: 30px;
     margin-right: 7px;
+    fill: #707070;
 }
 
-.icon image {
-    width: 30px;
-    height: 30px;
+.focus .icon {
+    fill: #ffffff;
 }
 
 .button-primary {

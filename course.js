@@ -36,7 +36,7 @@ function buildNavigation(nav, navItems) {
     navItems.forEach( function(p) {
         var navNode = document.createElement('button');
         var svgNode = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        var imageNode = document.createElement('image');
+        // var imageNode = document.createElement('image');
         
         navNode.setAttribute('class', 'button-primary');
         navNode.setAttribute('onclick', 'selectElement(this)');
@@ -45,8 +45,9 @@ function buildNavigation(nav, navItems) {
         
         if(nav == 'primary-menu') {
             svgNode.setAttribute('class', 'icon');
-            imageNode.setAttribute('href', p.icon);
-            svgNode.append(imageNode);
+            svgNode.setAttribute('viewBox', p.iconScale);
+            // imageNode.setAttribute('href', p.icon);
+            svgNode.innerHTML = p.icon;
             navNode.prepend(svgNode);    
         }
         
