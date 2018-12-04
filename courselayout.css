@@ -27,6 +27,7 @@ h1 a {
 }
 
 header {
+    border-bottom: solid 1px rgb(0, 0, 0, 0.25);
     background-color: #4086dc;
     flex-direction: row;
     min-width: 300px;
@@ -59,6 +60,10 @@ nav {
     fill: #707070;
 }
 
+.button-primary:hover .icon {
+    fill: #ffffff;
+}
+
 .focus .icon {
     fill: #ffffff;
 }
@@ -80,8 +85,8 @@ nav {
 }
 
 .button-primary:hover {
-    background-color: #dedede;
-    color: #000000;
+    background-color: #4086dc;
+    color: #ffffff;
 }
 .button-primary:focus {
     outline: none;
@@ -93,15 +98,18 @@ nav {
 }
 
 #primary-menu {
-    background-color: #e8e8ff;
+    background-color: #ffffff;
+    border-right: solid 1px rgb(0, 0, 0, 0.25);
 }
 
 #secondary-menu {
-    background-color: #f6f6ff;
+    background-color: #ffffff;
+    border-right: solid 1px rgb(0, 0, 0, 0.25);
     transition: width 0.2s;
 }
 
 .collapse {
+    border: 0 !important;
     visibility: hidden;
     opacity: 1;
     width: 0;
