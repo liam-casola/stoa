@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="Style.css">
-    <script src="Script.js"></script>
+    <link rel="stylesheet" href="globalstyle.css">
+    <link rel="stylesheet" href="homelayout.css">
+    <script src="globalfunctions.js"></script>
+    <script src="home.js"></script>
 
     <title>STOA</title>
 </head>
@@ -10,47 +12,53 @@
     <header>
         <h1><a href="index.html">STOA</a></h1>
     </header>
+    <div id="alert-bar">
+        <div id="alert-info">
+            STOA will be down for maintenance on December 10th (4 days from now)
+        </div>
+        <button onClick="closeAlert()">Dismiss</button>
+    </div>
     <div id="content">
         <div id="card-box">
             <div class="course-card">
-                <h2><a href="course.html">4HC3 Design n stuff</a></h2>
+                <a href="course.html"><h2>4HC3 Design</h2></a>
                 <h3>Announcements</h3>
                 <ul>
-                    <li>Test 1</li>
-                    <li>Test 2</li>
+                    <li><button>dismiss</button>Assignment 8 Posted</li>
+                    <li><button>dismiss</button>Assignment 7 Posted</li>
                 </ul>
                 <h3>Upcoming Events</h3>
                 <ul>
-                    <li>A6</li>
-                    <li>A7</li>
+                    <li>Assignment 8<span>in 7 days...</span></li>
+                    <li>Exam <span>in 23 days...</span></li>
                 </ul>
             </div>
 
             <div class="course-card">
-                <h2>3Y03 STATS</h2>
+                <a href="course.html"><h2>3Y03 STATS</h2></a>
                 <h3>Announcements</h3>
                 <ul>
-                    <li>Test 1</li>
-                    <li>Test 2</li>
+                    <li><button>dismiss</button>Assignment 4 Posted</li>
+                    <li><button>dismiss</button>Midterm marks are out</li>
                 </ul>
                 <h3>Upcoming Events</h3>
                 <ul>
-                    <li>A6</li>
-                    <li>A7</li>
+                    <li>Assignment 4<span>in 6 days...</span></li>
+                    <li>Exam <span>in 18 days...</span></li>
                 </ul>
             </div>
 
             <div class="course-card">
-                <h2>1D04 Card Tricks</h2>
+                <a href="course.html"><h2>3MM3 Materials</h2></a>
                 <h3>Announcements</h3>
                 <ul>
-                    <li>Test 1</li>
-                    <li>Test 2</li>
+                    <li><button>dismiss</button>Lab 8 material posted</li>
+                    <li><button>dismiss</button>No lecture on thursday</li>
                 </ul>
                 <h3>Upcoming Events</h3>
                 <ul>
-                    <li>A6</li>
-                    <li>A7</li>
+                    <li>Lab 8<span>in 2 days...</span></li>
+                    <li>Exam <span>in 21 days...</span></li>
                 </ul>
             </div>
         </div>

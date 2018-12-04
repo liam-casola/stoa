@@ -43,6 +43,10 @@ function buildNavigation(nav, navItems) {
         navNode.data = p.link;
         navNode.innerHTML = p.label;
         
+        if(p.submitted) {
+            document.getElementById('assig_submit').style.display = 'block';
+        }
+        
         if(nav == 'primary-menu') {
             svgNode.setAttribute('class', 'icon');
             svgNode.setAttribute('viewBox', p.iconScale);

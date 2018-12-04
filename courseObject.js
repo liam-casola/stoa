@@ -138,35 +138,43 @@ var courseData = [
         link: [
             {
                 label: 'Assignment 8',
-                link: 'course1/assig_8.pdf'
+                link: 'course1/assig_8.pdf',
+                submitted: false
             },
             {
                 label: 'Assignment 7',
-                link: 'course1/assig_7.pdf'
+                link: 'course1/assig_7.pdf',
+                submitted: false
             },
             {
                 label: 'Assignment 6',
-                link: 'course1/assig_6.pdf'
+                link: 'course1/assig_6.pdf',
+                submitted: true
             },
             {
                 label: 'Assignment 5',
-                link: 'course1/assig_5.pdf'
+                link: 'course1/assig_5.pdf',
+                submitted: true
             },
             {
                 label: 'Assignment 4',
-                link: 'course1/assig_4.pdf'
+                link: 'course1/assig_4.pdf',
+                submitted: true
             },
             {
                 label: 'Assignment 3',
-                link: 'course1/assig_3.pdf'
+                link: 'course1/assig_3.pdf',
+                submitted: true
             },
             {
                 label: 'Assignment 2',
-                link: 'course1/assig_2.pdf'
+                link: 'course1/assig_2.pdf',
+                submitted: true
             },
             {
                 label: 'Assignment 1',
-                link: 'course1/assig_1.pdf'
+                link: 'course1/assig_1.pdf',
+                submitted: true
             },
         ]
     },

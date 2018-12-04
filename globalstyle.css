@@ -34,28 +34,28 @@ header {
     height: 45px;
 }
 
+#alert-bar {
+    background-color: #fdecac;
+    font-family: 'IBMPlex';
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#alert-info {
+    
+}
+
+#alert-bar.closed {
+    visibility: hidden;
+    opacity: 1;
+    height: 0px;
+}
+
 #content {
     min-width: 400px;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-}
-
-#card-box {
-    margin: 0 auto;
-}
-
-.course-card {
-    display: inline-block;
-    width: 350px;
-    padding: 0px;
-    border: solid 1px #b1b1b1;
-    border-radius: 3px;
-}
-
-h2 {
-    margin: 0px;
-    border: 0px;
-    padding: 3px 1px;
-    background-color: aqua;
 }
