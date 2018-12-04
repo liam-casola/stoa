@@ -15,18 +15,19 @@ body {
 
 h1 {
     font-family: 'IBMPlex';
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
+    border: 0;
+    margin: 0;
+    padding: 0 0 0 15px;
     font-size: 45px;
 }
 
 h1 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 
 header {
+    background-color: #4086dc;
     flex-direction: row;
     min-width: 300px;
     height: 45px;
@@ -63,7 +64,7 @@ nav {
 }
 
 .button-primary {
-    background-color: #ffffff;
+    background-color: transparent;
     color: #707070;
     font-family: 'IBMPlex';
     font-weight: 700;
@@ -87,11 +88,16 @@ nav {
 }
 
 .button-primary.focus{
-    background-color: #dedede;
-    color: #000000;
+    background-color: #4086dc;
+    color: #ffffff;
+}
+
+#primary-menu {
+    background-color: #e8e8ff;
 }
 
 #secondary-menu {
+    background-color: #f6f6ff;
     transition: width 0.2s;
 }
 
