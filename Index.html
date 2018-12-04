@@ -3,16 +3,21 @@
 <head>
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="homelayout.css">
-    <script src="Script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>MAIN</title>
 </head>
 <body>
   <div class="topnav">
-    <a class="active" href="Index.html">Learning Library</a>
-    <a href="" class="notification">
-      <span>notification</span>
-      <span class="badge">3</span>
+    <a href="Index.html">
+      <span>Learning Library</span>
     </a>
+    <a id="notification-icon" class="notification" onmouseover="highlightOn()" onmouseout="highlightOff()">
+      <i class="fas fa-exclamation-triangle" align="right"></i>
+    </a>
+  </div>
+  <div id="notification-msg" class="notification" onmouseover="highlightOn()" onmouseout="highlightOff()">
+    Snow day called for December the 5th, 2018.
+    <button id="dismisbar" data-dismiss="notification-msg" type="button" onClick="hideNotification()">x</button>
   </div>
     <header>
         <h1>HIGHWAY TO KNOWLEDGE</h1>
@@ -21,16 +26,20 @@
         <div id="card-box">
             <div class="course-card">
                 <h2><a href="course.html">4HC3 Design n stuff</a></h2>
-                <h3>Announcements</h3>
-                <ul>
-                    <li>Test 1</li>
-                    <li>Test 2</li>
-                </ul>
-                <h3>Upcoming Events</h3>
-                <ul>
-                    <li>A6</li>
-                    <li>A7</li>
-                </ul>
+                <div id="flex-box">
+                  <div id="info-card">
+                    <h3>Announcements</h3>
+                    <ul>
+                      <li>Test 1</li>
+                      <li>Test 2</li>
+                    </ul>
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                      <li>A6</li>
+                      <li>A7</li>
+                    </ul>
+                </div>
+              </div>
             </div>
 
             <div class="course-card">
@@ -62,5 +71,20 @@
             </div>
         </div>
     </div>
+<script>
+var notiMsg = document.getElementById("notification-msg");
+var notiIcon = document.getElementById("notification-icon");
+function hideNotification() {
+  notiMsg.style.visibility = "hidden";
+}
+function highlightOn() {
+  notiMsg.style.background = "red";
+  notiIcon.style.background = "red";
+}
+function highlightOff() {
+  notiMsg.style.background = "#555";
+  notiIcon.style.background = "#555";
+}
+</script>
 </body>
 </html>
