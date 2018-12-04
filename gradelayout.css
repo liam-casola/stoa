@@ -17,27 +17,31 @@ body {
     flex-grow: 1;
 }
 
-.event {
-    background-color: #ffffff;
-    margin: 7px auto;
+table {
     width: 80%;
-    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0 auto;
     padding: 10px;
+    border-collapse: collapse;
     font-family: 'IBMPlex';
-    border-left: 30px solid #707070;
 }
 
-.event.unread {
-    border-color: #4086dc;
+table, th, td {
+    border: solid 1px #000000;
+    padding: 10px;
 }
 
-.event h2 {
-    margin: 0;
-    padding: 10px 0;
+.row-heading {
+    background-color: #4086dc;
+    color: #ffffff;
+    font-weight: 600;
 }
 
-.event p {
-    margin: 0;
-    padding: 0;
-    color: #676767;
+.row-sub-heading {
+    background-color: #eaeaea;
+    font-weight: 600;
+}
+
+.sub-heading {
+    padding-left: 50px;
 }
