@@ -19,6 +19,7 @@ h1 {
     margin: 0;
     padding: 0 0 0 15px;
     font-size: 45px;
+    display: inline-block;
 }
 
 h1 a {
@@ -29,22 +30,59 @@ h1 a {
 header {
     border-bottom: solid 1px rgb(0, 0, 0, 0.25);
     background-color: #4086dc;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     min-width: 300px;
     height: 45px;
 }
 
+#alert-icon {
+    fill: #ffffff;
+    width: 31px;
+    height: 31px;
+    padding: 7px;
+}
+
+#alert-icon:hover {
+    cursor: pointer;
+}
+
+#alert-icon.alert {
+    background-color: #fff3c4;
+    fill: #656565;
+    border-bottom: 1px solid #fff3c4;
+}
+
 #alert-bar {
-    background-color: #fdecac;
-    font-family: 'IBMPlex';
-    height: 30px;
+    background-color: #fff3c4;
+    height: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 #alert-info {
-    
+    font-family: 'IBMPlex';
+    font-size: 13px;
+    font-weight: 600;
+    color: #656565;
+}
+
+#alert-bar button {
+    background-color: transparent;
+    border: 0;
+    margin: 0 0 0 10px;
+    padding: 2px;
+    font-size: 11px;
+    color: #656565;
+}
+
+#alert-bar button:hover {
+    color: #000;
+    cursor: pointer;
 }
 
 #alert-bar.closed {

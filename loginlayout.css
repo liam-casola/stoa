@@ -1,6 +1,25 @@
 #login-wrapper {
-    width: 400px;
     margin: auto;
+    border: solid 1px #a9a9a9;
+    border-radius: 5px;
+}
+
+.form-title {
+    height: 30px;
+    padding: 0 50px;
+    background-color: #4086dc;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-title h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBMPlex';
+    font-size: 16px;
+    color: #ffffff;
 }
 
 #login-area {
@@ -12,9 +31,23 @@
 form input {
     width: 200px;
     padding: 5px;
+    margin: 3px;
+    border: solid 1px #a9a9a9;
+    border-radius: 5px;
 }
 
 form button {
     width: 150px;
     margin: 10px;
+    border: 0;
+    padding: 10px;
+    background-color: #4086dc;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: #707070;
+    cursor: pointer;
 }

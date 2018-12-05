@@ -69,8 +69,21 @@ nav {
 
 #assig_submit {
     display: none;
+    flex-direction: row;
+    align-items: center;
     height: 30px;
-    background-color: #ffffff;
+    background-color: #f99a9a;
+}
+
+#assig_submit.submitted {
+    background-color: #b1efb1;
+}
+
+#assig_status {
+    font-family: 'IBMPlex';
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14px;
 }
 
 .collapse {

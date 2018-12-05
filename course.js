@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     selectElement(document.getElementsByClassName('button-primary')[0]);
 });
 
+var submit = false;
+
 function selectElement(element) {
     var buttons = document.querySelectorAll('.button-primary.focus');
     for (let e of buttons) {
@@ -14,6 +16,23 @@ function selectElement(element) {
         }
     }
     element.classList.add('focus');
+    
+    if(element.hasOwnProperty('submitted')) {
+        document.getElementById('assig_submit').style.display = 'flex';
+        if(element.submitted) {
+            document.getElementById('assig_status').innerHTML = 'Already Submitted';
+            document.getElementById('assig_submit').classList.add('submitted');
+        } else {
+            document.getElementById('assig_status').innerHTML = 'Not Yet Submitted';
+            document.getElementById('assig_submit').classList.remove('submitted');
+        }
+        submit = true;
+    } else if(element.data.constructor === Array && submit == true){
+        // do nothing
+    } else {
+        document.getElementById('assig_submit').style.display = 'none';
+        submit = false;
+    }
     changeData(element);
 }
 
@@ -43,8 +62,8 @@ function buildNavigation(nav, navItems) {
         navNode.data = p.link;
         navNode.innerHTML = p.label;
         
-        if(p.submitted) {
-            document.getElementById('assig_submit').style.display = 'block';
+        if(p.hasOwnProperty('submitted')) {
+            navNode.submitted = p.submitted;
         }
         
         if(nav == 'primary-menu') {

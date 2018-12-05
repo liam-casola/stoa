@@ -14,7 +14,7 @@
 h2 {
     margin: 0;
     border: 0;
-    padding: 5px 3px;
+    padding: 5px 10px;
 }
 
 a {
@@ -26,10 +26,48 @@ a h2{
     color: #ffffff
 }
 
+a h2:hover {
+    background-color: #707070;
+}
+
+h3 {
+    margin: 0 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0 10px 0;
+    font-size: 14px;
+}
+
 li {
     list-style: none;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    color: #707070;
 }
 
 li span {
-    margin-left: 20px;
+    width: 50px;
+}
+
+li button {
+    background-color: transparent;
+    border: 0;
+    margin: 0 10px 0 0;
+    padding: 2px 5px;
+    font-size: 16px;
+    color: #656565;
+}
+
+li button:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.due-soon {
+    
 }

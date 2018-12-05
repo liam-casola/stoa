@@ -1,14 +1,21 @@
-var alertClosed = false;
+var alertClosed = localStorage.getItem('alertClosed');
 
-function closeAlert() {
-    var alertBar = document.getElementById('alert-bar');
-    alertBar.classList.add('closed');
+function toggleAlert() {
+    var ico = document.getElementById('alert-icon').classList;
+    if (ico != null && ico.contains('alert')) {
+        localStorage.setItem('alertClosed', 'true');
+        document.getElementById('alert-bar').classList.add('closed');
+        document.getElementById('alert-icon').classList.remove('alert');
+    } else {
+        localStorage.setItem('alertClosed', 'false');
+        document.getElementById('alert-bar').classList.remove('closed');
+        document.getElementById('alert-icon').classList.add('alert');
+    }
 }
 
 var isLoggedIn = false;
 
 if (isLoggedIn == false) {
-    console.log('code hit');
     pages = location.href.split(/[\s/]+/);
     if (pages[pages.length-1] != 'login.html') {
         // location = 'login.html';
