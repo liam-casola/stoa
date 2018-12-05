@@ -92,7 +92,7 @@ header {
 }
 
 #content {
-    min-width: 400px;
+    min-width: 450px;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
